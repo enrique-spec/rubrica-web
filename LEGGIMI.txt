@@ -1,0 +1,37 @@
+LA MIA RUBRICA — VERSIONE WEB
+
+Questa versione non modifica l'app Python per Mac.
+
+PUBBLICAZIONE SU GITHUB PAGES
+1. Crea un repository dedicato, ad esempio rubrica-web.
+2. Carica nella radice del repository index.html, app.js, icona.png,
+   manifest.webmanifest e sw.js (non la cartella ZIP).
+3. In Settings > Pages scegli Deploy from a branch, main, / (root).
+4. Attendi il link HTTPS fornito da GitHub Pages.
+
+Non caricare contatti.json, backup personali o .rubrica_accesso.json.
+Non cambiare dominio/percorso senza prima esportare i backup degli utenti:
+i dati appartengono al browser e all'origine web, non al repository.
+
+USO
+Apri il link HTTPS, scegli una password e confermala al primo accesso.
+La password serve a nascondere l'interfaccia: NON cifra i contatti e non
+protegge da chi accede ai dati del browser o modifica il codice del sito.
+Non esiste recupero automatico della password.
+Ogni browser/profilo conserva dati distinti; non c'è sincronizzazione.
+Evita navigazione privata. La cancellazione dei dati del sito, il cambio
+dispositivo o la rimozione dei dati da parte del browser può perdere tutto.
+Esporta backup regolari; i backup sono JSON leggibili e non contengono
+la password. Importare aggiunge i contatti; non elimina i duplicati.
+Puoi importare il contatti.json della precedente app Mac.
+
+INSTALLAZIONE
+iPhone/Safari: Condividi > Aggiungi alla schermata Home.
+Android/Chrome: menu > Installa app o Aggiungi alla schermata Home.
+Le opzioni dipendono dal browser. Dopo il primo caricamento completo e
+l'attivazione del service worker, le risorse possono funzionare offline.
+
+VERIFICA
+Controllata la sintassi JavaScript. Non eseguito un test browser completo
+né una pubblicazione: provare creazione password, riapertura, CRUD,
+backup, importazione e installazione sui dispositivi prima di distribuire.
